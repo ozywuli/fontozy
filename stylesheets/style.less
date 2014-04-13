@@ -1,0 +1,188 @@
+/******** Imports ********/
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../media/typefaces/fira-sans/FiraSansOT-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Quicksand Light';
+  src: url('../media/typefaces/quicksand/Quicksand-Light.otf');
+}
+
+
+@import "reset.less";
+
+
+
+/******** Variables ********/
+
+@light-gray: #E3E3E1;
+@sun-yellow: #FFEF16;
+@serious-navy-blue: #183152;
+@dark-orange: #B33600;
+@serious-teal: #0E5066;
+@dark-gray: #333333;
+
+
+
+
+/******** Mixins ********/
+
+.align-mid-960 {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+
+
+/******** Global Styles ********/
+
+.globals {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2rem;
+  a {
+    color: orange;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+
+
+
+/******** Header Styles ********/
+
+div.intro-container {
+  padding: 2rem 0 4rem 0;
+  background-color: @light-gray;
+  header.title-wrapper {
+    .align-mid-960;
+    h1 {
+      margin-left: -1rem;
+      font-size: 16rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    p {
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+}
+
+
+
+
+/******** Section Styles ********/
+
+section#ubuntu-mono {
+  padding: 6rem 0;
+  background-color: @sun-yellow;
+  article.text {
+    .align-mid-960;
+    font-family: 'Ubuntu Mono';
+    a {
+      color: #000;
+    }
+  }
+}
+
+
+section#roboto {
+  padding: 6rem 0;
+  background-color: @serious-navy-blue;
+  article.text {
+    .align-mid-960;
+    font-family: 'Roboto', sans-serif;
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+section#quicksand-light {
+  padding: 6rem 0;
+  background-color: #000;
+  color: #FFF;
+  article.text {
+    .align-mid-960;
+    font-family: 'Quicksand Light', sans-serif;
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+
+section#roboto-slab {
+  padding: 6rem 0;
+  background-color: @dark-orange;;
+  article.text {
+    .align-mid-960;
+    font-family: 'Roboto Slab', serif;
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+section#maven-pro {
+  padding: 6rem 0;
+  background-color: @serious-teal;
+  article.text {
+    .align-mid-960;
+    font-family: 'Maven Pro', sans-serif;
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+section#crimson-text {
+  padding: 6rem 0;
+  background-color: #FFF;
+  article.text {
+    .align-mid-960;
+    font-family: 'Crimson Text', serif;
+    a {
+      color: #000;
+    }
+  }
+}
+
+section#fira-sans {
+  padding: 6rem 0;
+  background-color: orange;
+  article.text {
+    .align-mid-960;
+    font-family: 'Fira Sans', sans-serif;
+    a {
+      color: #FFF;
+    }
+  }
+}
+
+
+
+
+/******** Footer Styles ********/
+
+.footer-container {
+  padding: 6rem 0;
+  background-color: @dark-gray;
+  color: #FFF;
+  footer {
+    .align-mid-960;
+    .author {
+      color: teal;
+    }
+    .ruhoh {
+      color: #607848;
+    }
+  }
+}
