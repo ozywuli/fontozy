@@ -1,18 +1,16 @@
 /******** Imports ********/
 
+@import "reset.less";
+
 @font-face {
   font-family: 'Fira Sans';
   src: url('../media/typefaces/fira-sans/FiraSansOT-Regular.otf');
 }
 
 @font-face {
-  font-family: 'Quicksand Light';
-  src: url('../media/typefaces/quicksand/Quicksand-Light.otf');
+  font-family: 'Quicksand Regular';
+  src: url('../media/typefaces/quicksand/Quicksand-Regular.otf');
 }
-
-
-@import "reset.less";
-
 
 
 /******** Variables ********/
@@ -46,7 +44,7 @@
   a {
     color: orange;
     &:hover {
-      color: #000;
+      text-decoration: underline;
     }
   }
 }
@@ -71,8 +69,19 @@ div.intro-container {
       margin-top: -1rem;
       margin-bottom: 2rem;
     }
-  }
 
+  }
+  @media screen and (max-width: 635px) {
+    font-size: 1.5rem;
+    header.title-wrapper {
+      h1 {
+        font-size: 12rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 
@@ -80,11 +89,29 @@ div.intro-container {
 
 /******** Section Styles ********/
 
+section.sample {
+  article.text {
+    .align-mid-960;
+    h2 {
+      font-size: 4rem;
+      line-height: 1;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .source {
+      margin-top: 2rem;
+    }
+  }
+}
+
 section#ubuntu-mono {
   padding: 6rem 0;
   background-color: @sun-yellow;
   article.text {
-    .align-mid-960;
+
     font-family: 'Ubuntu Mono';
     a {
       color: #000;
@@ -97,7 +124,9 @@ section#roboto {
   padding: 6rem 0;
   background-color: @serious-navy-blue;
   article.text {
-    .align-mid-960;
+    h2 {
+      color: #FFF;
+    }
     font-family: 'Roboto', sans-serif;
     a {
       color: #FFF;
@@ -105,13 +134,13 @@ section#roboto {
   }
 }
 
-section#quicksand-light {
+section#quicksand-regular {
   padding: 6rem 0;
   background-color: #000;
   color: #FFF;
   article.text {
-    .align-mid-960;
-    font-family: 'Quicksand Light', sans-serif;
+
+    font-family: 'Quicksand Regular', sans-serif;
     a {
       color: #FFF;
     }
@@ -121,10 +150,12 @@ section#quicksand-light {
 
 section#roboto-slab {
   padding: 6rem 0;
-  background-color: @dark-orange;;
+  background-color: @dark-orange;
   article.text {
-    .align-mid-960;
     font-family: 'Roboto Slab', serif;
+    h2 {
+      color: @sun-yellow;
+    }
     a {
       color: #FFF;
     }
@@ -135,7 +166,9 @@ section#maven-pro {
   padding: 6rem 0;
   background-color: @serious-teal;
   article.text {
-    .align-mid-960;
+    h2 {
+      color: orange;
+    }
     font-family: 'Maven Pro', sans-serif;
     a {
       color: #FFF;
@@ -147,7 +180,7 @@ section#crimson-text {
   padding: 6rem 0;
   background-color: #FFF;
   article.text {
-    .align-mid-960;
+
     font-family: 'Crimson Text', serif;
     a {
       color: #000;
@@ -159,7 +192,9 @@ section#fira-sans {
   padding: 6rem 0;
   background-color: orange;
   article.text {
-    .align-mid-960;
+    h2 {
+      color: @dark-orange;
+    }
     font-family: 'Fira Sans', sans-serif;
     a {
       color: #FFF;
@@ -176,8 +211,16 @@ section#fira-sans {
   padding: 6rem 0;
   background-color: @dark-gray;
   color: #FFF;
-  footer {
+  .thanks {
     .align-mid-960;
+    font-size: 4rem;
+  }
+  .credits {
+    .align-mid-960;
+    a {
+      color: #CCC;
+
+    }
     .author {
       color: teal;
     }
